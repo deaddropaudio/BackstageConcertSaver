@@ -1,3 +1,6 @@
+
+![icon_128](https://github.com/deaddropaudio/BackstageConcertSaver/assets/60516080/f9cbef2b-ce5c-44a4-bf10-de681b837f5d)
+
 # Backstage Concert Saver
 
 The "Backstage Concert Saver" Chrome extension allows users to easily save concert dates and details from https://backstage.eu/ directly to their calendar. With a simple click, concert goers can ensure they never miss an event from their favorite venue.
