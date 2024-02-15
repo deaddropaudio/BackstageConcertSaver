@@ -1,3 +1,6 @@
+
+![icon_128](https://github.com/deaddropaudio/BackstageConcertSaver/assets/60516080/f9cbef2b-ce5c-44a4-bf10-de681b837f5d)
+
 # Backstage Concert Saver
 
 The "Backstage Concert Saver" Chrome extension allows users to easily save concert dates and details from https://backstage.eu/ directly to their calendar. With a simple click, concert goers can ensure they never miss an event from their favorite venue.
@@ -14,7 +17,7 @@ This guide will help you manually install the "Backstage Concert Saver" Chrome e
 
 ### Step 1: Download the Extension
 
-1. Navigate to the GitHub repository.
+1. Navigate to the "BackstageConcertSaver" folder above and open it.
 2. Find the **Code** button and click it.
 3. Select **Download ZIP** from the dropdown menu.
 4. Once downloaded, unzip the file to a folder on your computer.
