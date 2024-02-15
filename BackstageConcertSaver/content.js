@@ -22,10 +22,13 @@ function createICalFile() {
     const title = titleElement.innerText;
     let dateInfo = dateElement.innerText.trim().replace(/\s+/g, ' ');
     let startTime = startTimeElement.innerText.trim().replace(' Uhr', '');
+
     let dateTimeString = `${dateInfo} ${startTime}`;
     dateTimeString = convertGermanDateToISO(dateTimeString);
 
+
     if (!dateTimeString) {
+    
         console.error('Invalid date format.');
         return;
     }
@@ -73,20 +76,27 @@ function downloadICalFile(content, title) {
 }
 
 function convertGermanDateToISO(dateTimeString) {
+    const parts = dateTimeString.match(/(\d{1,2})\.\s*(\p{L}+)\s*(\d{4})\s*(\d{1,2}):(\d{2})/u);
+    if (!parts) {
+        console.error("Regex did not match:", dateTimeString);
+        return null;
+    }
 
     const months = {
         'Januar': '01', 'Februar': '02', 'März': '03', 'April': '04', 'Mai': '05', 'Juni': '06',
         'Juli': '07', 'August': '08', 'September': '09', 'Oktober': '10', 'November': '11', 'Dezember': '12'
     };
 
-    const parts = dateTimeString.match(/(\d+)\. (\w+) (\d+) (\d+):(\d+)/);
-    if (!parts) return null;
-
-    const year = parts[3];
-    const month = months[parts[2]];
     const day = parts[1].padStart(2, '0');
-    const hour = parts[4];
+    const month = months[parts[2]];
+    const year = parts[3];
+    const hour = parts[4].padStart(2, '0');
     const minute = parts[5];
+
+    if (!month) {
+        console.error("Failed to match month:", parts[2]);
+        return null;
+    }
 
     return `${year}-${month}-${day}T${hour}:${minute}`;
 }
