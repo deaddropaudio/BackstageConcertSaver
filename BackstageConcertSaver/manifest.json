@@ -1,0 +1,25 @@
+{
+    "manifest_version": 3,
+    "name": "Concert Calendar Saver",
+    "version": "1.0",
+    "description": "Save concert dates to your calendar.",
+    "permissions": ["activeTab", "scripting", "tabs"],
+    "action": {
+      "default_popup": "popup.html"
+    },
+    "background": {
+      "service_worker": "background.js"
+    },
+    "content_scripts": [
+        {
+          "matches": ["https://backstage.eu/*"],
+          "js": ["content.js"]
+        }
+      ],
+      "icons": {
+        "48": "icons/icon_48.png",
+        "128": "icons/icon_128.png"
+    }
+      
+  }
+  
