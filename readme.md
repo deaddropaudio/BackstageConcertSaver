@@ -14,7 +14,7 @@ This guide will help you manually install the "Backstage Concert Saver" Chrome e
 
 ### Step 1: Download the Extension
 
-1. Navigate to the GitHub repository.
+1. Navigate to the "BackstageConcertSaver" folder above and open it.
 2. Find the **Code** button and click it.
 3. Select **Download ZIP** from the dropdown menu.
 4. Once downloaded, unzip the file to a folder on your computer.
